@@ -1,0 +1,71 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.dynamicicon">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+      android:name=".MainApplication"
+      android:label="@string/app_name"
+      android:icon="@mipmap/a"
+      android:roundIcon="@mipmap/a_round"
+      android:allowBackup="false"
+      android:theme="@style/AppTheme">
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+        android:launchMode="singleTask"
+        android:windowSoftInputMode="adjustResize">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+      </activity>
+
+      <activity-alias 
+        android:name=".MainActivityAlias1" 
+        android:roundIcon="@mipmap/a_round"
+        android:label="newname1"
+        android:icon="@mipmap/a"
+        android:enabled="false" 
+        android:targetActivity=".MainActivity">
+        <intent-filter>
+      
+          <action android:name="android.intent.action.MAIN"/>
+          <category android:name="android.intent.category.LAUNCHER"/>
+      
+        </intent-filter>
+      </activity-alias>
+
+       <activity-alias 
+        android:name=".MainActivityAlias2" 
+        android:roundIcon="@mipmap/b_round"
+        android:label="newname2"
+        android:icon="@mipmap/b_round"
+        android:enabled="false" 
+        android:targetActivity=".MainActivity">
+        <intent-filter>
+      
+          <action android:name="android.intent.action.MAIN"/>
+          <category android:name="android.intent.category.LAUNCHER"/>
+      
+        </intent-filter>
+      </activity-alias>
+
+       <activity-alias 
+        android:name=".MainActivityAlias3" 
+        android:roundIcon="@mipmap/c_round"
+        android:label="newname3"
+        android:icon="@mipmap/c"
+        android:enabled="false" 
+        android:targetActivity=".MainActivity">
+        <intent-filter>
+      
+          <action android:name="android.intent.action.MAIN"/>
+          <category android:name="android.intent.category.LAUNCHER"/>
+      
+        </intent-filter>
+      </activity-alias>
+
+    </application>
+</manifest>
